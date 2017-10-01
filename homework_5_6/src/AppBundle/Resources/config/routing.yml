@@ -1,0 +1,12 @@
+
+category:
+    path:     /
+    defaults: { _controller: AppBundle:shop:category }
+
+list:
+    path:     /list/{selected}
+    defaults: { _controller: AppBundle:shop:list }
+
+view:
+    path:     /view/{selected}/{id}
+    defaults: { _controller: AppBundle:shop:view }

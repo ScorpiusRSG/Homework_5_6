@@ -1,0 +1,15 @@
+{% extends "AppBundle::homePage.html.twig" %}
+
+{% block css %}
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+{% endblock %}
+
+{% block title %}<h1>Our products</h1>{% endblock %}
+
+{% block body %}
+        {% for list in tovar %}
+            <h1>{{ list.position }}</h1>
+            <input type='button' value='View' onClick='location.href="{{ path("list", { 'selected' : list.position } ) }}"'>
+            <hr>
+        {% endfor %}
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "AppBundle::homePage.html.twig" %}
+
+{% block css %}
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+{% endblock %}
+
+{% block title %}<h1>Selected product</h1>{% endblock %}
+
+{% block body %}
+        <h1>Firm - {{ item.firm }}</h1>
+        <h1>{{ item.description }}</h1>
+        {{ item.image }}
+        <h1>Price - {{ item.price }}</h1>
+        <button>Buy</button>
+        <input type='button' value='Return' onClick='location.href="{{ path( "list", { "selected" : selected } ) }}"'>
+        <hr>
+{% endblock %}
